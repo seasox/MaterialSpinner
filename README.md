@@ -1,6 +1,12 @@
 # MaterialSpinner
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialSpinner-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1720)
 
+[Fork for the original]
+https://github.com/ganfra/MaterialSpinner after the need to use this pull request
+https://github.com/ganfra/MaterialSpinner/pull/64
+since the creator of the library didn't merge.
+big thanks to @petecocoon
+
 Spinner with Material Design - Down to API 9
 
 This library provides you a Spinner with the Material style. You can use it like any regular Spinner. 
@@ -10,15 +16,25 @@ Add floating label text, hint and error messages.
 ![MaterialSpinner](./screenshots/screenshot.gif)
 
 ## Gradle Dependency
-Use this dependency in your build.gradle file to reference this library in your project
+Add it in your root build.gradle at the end of repositories:
+```groovy
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency
 
 ```groovy
-compile 'com.github.ganfra:material-spinner:1.1.1'
+ compile 'com.github.riadhnet:MaterialSpinner:1.2'
 ```
+
 
 If you use other libraries requiring nineoldandroids and appcompat-v7 like [MaterialEditText](https://github.com/rengwuxian/MaterialEditText/) make sure to exclude them :
 ```groovy
-compile ('com.github.ganfra:material-spinner:1.1.1'){
+ compile('com.github.riadhnet:MaterialSpinner:1.2') {
         exclude group: 'com.nineoldandroids', module: 'library'
         exclude group: 'com.android.support', module: 'appcompat-v7'
 }
@@ -50,7 +66,9 @@ In the xml :
         app:ms_arrowColor="@color/arrow"
         app:ms_arrowSize="16dp"
         app:ms_alignLabels="false"
-        app:ms_floatingLabelColor="@color/floating_label"/>
+        app:ms_floatingLabelColor="@color/floating_label"
+        app:ms_dropDownHintView="@layout/dropdown_hint_item"
+        app:ms_hintView="@layout/hint_item"/>
 ```
 You can set a hint and a floating label text. If no floating label text is provided, the hint will be set instead.
 

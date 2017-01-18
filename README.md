@@ -69,7 +69,7 @@ If you need to set an error message, you can do it the same way than with an Edi
  //Desactivate
  spinner.setError(null);
 ```
-You can choose to have a scrolling animation or to set the error message on multiple lines with the "msp_multiline" attribute in xml (default is true).
+You can choose to have a scrolling animation or to set the error message on multiple lines with the "ms_multiline" attribute in xml (default is true).
 
 
 ## License

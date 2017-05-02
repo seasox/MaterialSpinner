@@ -598,6 +598,7 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
  
      public void setDisabledColor(int disabledColor) {
          this.disabledColor = disabledColor;
+	 invalidate();
      }
 	
     public void setHint(CharSequence hint) {

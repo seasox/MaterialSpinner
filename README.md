@@ -28,13 +28,13 @@ allprojects {
 Add the dependency
 
 ```groovy
- compile 'com.github.riadhnet:MaterialSpinner:1.2'
+ compile 'com.github.riadhnet:MaterialSpinner:1.2.1'
 ```
 
 
 If you use other libraries requiring nineoldandroids and appcompat-v7 like [MaterialEditText](https://github.com/rengwuxian/MaterialEditText/) make sure to exclude them :
 ```groovy
- compile('com.github.riadhnet:MaterialSpinner:1.2') {
+ compile('com.github.riadhnet:MaterialSpinner:1.2.1') {
         exclude group: 'com.nineoldandroids', module: 'library'
         exclude group: 'com.android.support', module: 'appcompat-v7'
 }

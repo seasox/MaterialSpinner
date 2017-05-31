@@ -1,5 +1,7 @@
 package fr.ganfra.materialspinner;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -25,8 +27,6 @@ import android.widget.BaseAdapter;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.ValueAnimator;
 
 
 public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.AnimatorUpdateListener {
@@ -232,9 +232,15 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
     }
 
     @Override
-    public int getSelectedItemPosition() {
-        return super.getSelectedItemPosition();
-    }
+       public int getSelectedItemPosition() {
+           // Return 1 less than the actual value if hint or
+           // floating label text is set
+           if (hint != null || floatingLabelText != null) {
+               return super.getSelectedItemPosition() - 1;
+           }
+           return super.getSelectedItemPosition();
+       }
+
 
     private void initPadding() {
 
@@ -525,8 +531,7 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
                 }
                 lastPosition = position;
 
-                if (listener != null) {
-                    position = hint != null ? position - 1 : position;
+                if (listener != null) {                  
                     listener.onItemSelected(parent, view, position, id);
                 }
             }

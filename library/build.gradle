@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.1'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.1'
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 23
+        minSdkVersion 14
+        targetSdkVersion 26
     }
     buildTypes {
         release {
@@ -15,11 +15,10 @@ android {
         }
     }
 
-
     dependencies {
-        compile 'com.android.support:appcompat-v7:25.0.1'
-        compile 'com.android.support:recyclerview-v7:25.0.1'
+        compile 'com.android.support:appcompat-v7:26.1.0'
+        compile 'com.android.support:recyclerview-v7:26.1.0'
     }
 
-    //apply from: '../maven_push.gradle'
+    apply from: '../maven_push.gradle'
 }

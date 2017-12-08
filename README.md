@@ -7,7 +7,7 @@ https://github.com/ganfra/MaterialSpinner/pull/64
 since the creator of the library didn't merge.
 big thanks to @petecocoon
 
-Spinner with Material Design - Down to API 9
+Spinner with Material Design
 
 This library provides you a Spinner with the Material style. You can use it like any regular Spinner. 
 Add floating label text, hint and error messages.
@@ -28,17 +28,19 @@ allprojects {
 Add the dependency
 
 ```groovy
- compile 'com.github.riadhnet:MaterialSpinner:1.2.1'
+compile 'com.github.ganfra:material-spinner:2.0.0'
 ```
 
-
-If you use other libraries requiring nineoldandroids and appcompat-v7 like [MaterialEditText](https://github.com/rengwuxian/MaterialEditText/) make sure to exclude them :
+If you use other libraries requiring appcompat-v7 like [MaterialEditText](https://github.com/rengwuxian/MaterialEditText/) make sure to exclude them if you have issue at compile time :
 ```groovy
- compile('com.github.riadhnet:MaterialSpinner:1.2.1') {
-        exclude group: 'com.nineoldandroids', module: 'library'
+compile ('com.github.ganfra:material-spinner:2.0.0'){
         exclude group: 'com.android.support', module: 'appcompat-v7'
 }
 ```
+
+## Thanks
+
+Many thanks to Matías Dumrauf to help me supporting this library!
 
 
 ## Usages
@@ -48,11 +50,11 @@ In the xml :
 ```xml
 <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/spinner"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" 
         app:ms_multiline="false"
         app:ms_dropDownHintView="@layout/my_custom_dropdown_hint_item_layout"
-        app:ms_hintView="@layout/my_custom_hint_item_layout""
+        app:ms_hintView="@layout/my_custom_hint_item_layout"
         app:ms_hint="hint"
         app:ms_enableFloatingLabel="false"
         app:ms_enableErrorLabel="false"
@@ -94,7 +96,7 @@ You can choose to have a scrolling animation or to set the error message on mult
 
 ## License
 
-    Copyright 2015 François Ganard
+    Copyright 2017 François Ganard
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

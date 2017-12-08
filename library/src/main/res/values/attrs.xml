@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="MaterialSpinner">
-        <attr name="ms_baseColor" format="integer"/>
-        <attr name="ms_highlightColor" format="integer"/>
-        <attr name="msp_errorColor" format="integer"/>
+        <attr name="ms_baseColor" format="color"/>
+        <attr name="ms_highlightColor" format="color"/>
+        <attr name="msp_errorColor" format="color"/>
         <attr name="ms_error" format="string"/>
         <attr name="ms_hint" format="string"/>
         <attr name="ms_hintColor" format="color"/>
+        <attr name="ms_hintTextSize" format="dimension"/>
         <attr name="ms_floatingLabelText" format="string"/>
         <attr name="ms_floatingLabelColor" format="color"/>
         <attr name="ms_multiline" format="boolean"/>
@@ -19,6 +20,7 @@
         <attr name="ms_arrowColor" format="color"/>
         <attr name="ms_enableFloatingLabel" format="boolean"/>
         <attr name="ms_enableErrorLabel" format="boolean"/>
+        <attr name="ms_alwaysShowFloatingLabel" format="boolean"/>
         <attr name="ms_isRtl" format="boolean"/>
         <attr name="ms_hintView" format="reference"/>
         <attr name="ms_dropDownHintView" format="reference"/>
